@@ -27,21 +27,93 @@ nav a {
 /* Carousel Styles */
 .carousel {
   width: 100vw;
+  height: 100vh; /* full viewport height */
   overflow: hidden;
   position: relative;
-  background: #eee;
-  margin-bottom: 2rem;
+  border-radius: 0; /* remove rounded corners for edge-to-edge */
+  box-shadow: none; /* optional: remove shadow for full bleed */
+  background: transparent; /* keep background clear */
+  margin-bottom: 0;
 }
+
 .carousel-images {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 400vw; /* 3 original images + 1 clone */
-}
-.carousel-images img {
+  position: relative;
   width: 100vw;
-  height: 300px;
+  height: 100vh; /* or desired height */
+}
+
+.carousel-images img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
-  flex-shrink: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.carousel-images img.active {
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.carousel-images img:hover {
+  filter: brightness(1);
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  transform: translateY(-50%);
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.carousel-nav button {
+  pointer-events: all;
+  background: #1458a0cc;
+  border: none;
+  border-radius: 40px;
+  width: 44px;
+  height: 44px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.3rem;
+  box-shadow: 0 3px 8px #00000077;
+  transition: background 0.3s;
+}
+
+.carousel-nav button:hover {
+  background: #1458a0ee;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  display: flex;
+  gap: 14px;
+  transform: translateX(-50%);
+}
+
+.carousel-dots button {
+  width: 12px;
+  height: 12px;
+  background: #ddd;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dots button.active {
+  background: #1458a0;
 }
 
 .goals {
