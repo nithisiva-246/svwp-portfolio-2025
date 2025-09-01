@@ -4,25 +4,67 @@ body {
   background: #f5f7fa;
   color: #333;
 }
+
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1100;
+  box-shadow: none;
+  /* padding: 1rem 1.5rem; */
+  transition: transform 0.35s cubic-bezier(.4,0,.2,1), background 0.3s;
   background: #1458a0;
   color: #fff;
   padding: 1rem;
   text-align: center;
 }
+
+header.hide {
+  transform: translateY(-100%);
+}
+
+header.show {
+  transform: translateY(0%);
+}
+
+header.sticky{
+  transform: translateY(0%);
+  background: white;
+  color: black;
+}
+
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  gap: 2rem;              /* spacing between menu items */
+  list-style: none;       /* remove default bullet points */
+  margin: 0;
+  padding: 0;
+  justify-content: center; /* center nav items horizontally */
+  align-items: center;
 }
-nav a {
-  color: #fff;
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
   text-decoration: none;
+  color: white;           /* or adjust based on your header bg */
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.6rem 0;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent; /* underline on hover */
+  display: inline-block;
 }
+
+nav ul li a:hover,
+nav ul li a:focus {
+  color: #ffd166;         /* highlight color on hover/focus */
+  border-bottom-color: #ffd166;
+  outline: none;
+}
+
 
 /* Carousel Styles */
 .carousel {
