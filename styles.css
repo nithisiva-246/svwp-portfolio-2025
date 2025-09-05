@@ -5,15 +5,18 @@ body {
   color: #333;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1100;
   box-shadow: none;
-  /* padding: 1rem 1.5rem; */
   transition: transform 0.35s cubic-bezier(.4,0,.2,1), background 0.3s;
-  background: #1458a0;
+  background: rgba(72, 72, 72, 0.43);
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -30,7 +33,7 @@ header.show {
 header.sticky{
   transform: translateY(0%);
   background: white;
-  color: black;
+  color: #fff;
 }
 
 nav ul {
@@ -49,7 +52,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: white;           /* or adjust based on your header bg */
+  color: black;           /* or adjust based on your header bg */
   font-weight: 600;
   font-size: 1rem;
   padding: 0.6rem 0;
@@ -65,11 +68,10 @@ nav ul li a:focus {
   outline: none;
 }
 
-
 /* Carousel Styles */
 .carousel {
   width: 100vw;
-  height: 100vh; /* full viewport height */
+  height: 700px;
   overflow: hidden;
   position: relative;
   border-radius: 0; /* remove rounded corners for edge-to-edge */
@@ -193,6 +195,7 @@ nav ul li a:focus {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  width: 95%;
 }
 .product {
   background: #fff;
@@ -247,6 +250,9 @@ footer {
   .carousel-images img {
     height: 200px;
   }
+  .product-card {
+    max-width: 90%;
+  }
 }
 @media (max-width: 600px) {
   header,
@@ -268,4 +274,145 @@ footer {
   .product {
     padding: 1rem;
   }
+}
+
+.rich-bg {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+  /* color: #f0f0f0; */
+  font-family: 'Inter', Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.rich-bg::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: url('images/noise-texture.png') repeat;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.rich-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(20, 88, 160, 0.25);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+}
+
+.product-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.product-card {
+  background: var(--card-bg, #fefefe);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgb(20 88 160 / 0.1);
+  padding: 1.5rem;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  height: 180px;
+}
+
+.product-card h2 {
+  font-weight: 700;
+  color: var(--primary, #1458a0);
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgb(20 88 160 / 0.18);
+}
+
+.prod-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.prod-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: var(--card-bg, #fefefe);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgb(20 88 160 / 0.1);
+  padding: 1.5rem 2rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.prod-card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+
+.prod-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.prod-info h2 {
+  font-weight: 700;
+  color: var(--primary, #1458a0);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.prod-info p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+.prod-card:hover {
+  box-shadow: 0 12px 32px rgb(20 88 160 / 0.18);
+}
+
+@media (max-width: 768px) {
+  .prod-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .prod-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  .prod-info h2 {
+    font-size: 1.3rem;
+  }
+
 }
