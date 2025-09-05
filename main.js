@@ -15,3 +15,10 @@ window.addEventListener("scroll", () => {
     header.classList.remove("sticky");
   }
 });
+
+
+fetch('header.html')
+  .then(resp => resp.text())
+  .then(html => {
+    document.getElementById('header').innerHTML = html;
+});
