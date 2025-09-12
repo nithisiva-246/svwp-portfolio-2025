@@ -1,10 +1,14 @@
- <header>
+<link rel="stylesheet" href="styles.css" />
+<header>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <ul class="premium-nav">
+          <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="products.html" class="nav-link"><i class="fas fa-box"></i> Products</a></li>
+          <li><a href="#about" class="nav-link"><i class="fas fa-users"></i> About Us</a></li>
+          <li><a href="#" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        </ul>
       </ul>
     </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">&#9776;</button>
   </header>
