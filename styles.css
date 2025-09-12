@@ -11,7 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 
-header {
+.header-h1 {
   position: fixed;
   top: 0;
   width: 100%;
@@ -32,6 +32,10 @@ header {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+.header-h2 {
+  visibility: hidden;
+}
+
 header.hide {
   transform: translateY(-100%);
 }
@@ -46,6 +50,10 @@ header.sticky {
   color: #333;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-bar {
+  visibility: visible;
 }
 
 nav ul {
@@ -268,34 +276,24 @@ footer {
 
 /* Responsive styles */
 @media (max-width: 900px) {
-  .goals,
-  .product-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  .goal-container,
-  .product {
-    max-width: 90vw;
+  .carousel{
+    padding-top: 0px;
+    height: 800px;
   }
   .carousel-images img {
     height: 80%;
   }
-  .product-card {
-    max-width: 90%;
+  .carousel-text {
+    font-size: 60px;
   }
-}
-@media (max-width: 600px) {
-  header,
-  footer {
-    padding: 1rem 0.3rem;
+  .nav-bar {
+    visibility: hidden;
   }
-  .intro,
-  .products {
-    padding: 1rem 0.3rem;
+  .header-h2 {
+    visibility: visible;
   }
-  .carousel-images img {
-    height: 80%;
+  .header-h1 {
+    visibility: hidden;
   }
   h1,
   h2 {
