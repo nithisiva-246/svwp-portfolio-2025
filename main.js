@@ -22,3 +22,8 @@ fetch('header.html')
   .then(html => {
     document.getElementById('header').innerHTML = html;
 });
+
+function openContactUsForm() {
+  window.location.href = 'contact-us.html';  // Navigate in the same window/tab
+}
+
