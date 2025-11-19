@@ -1,5 +1,6 @@
 const images = document.querySelectorAll(".carousel-images img");
 let index = 0;
+let interval = 3000;
 const totalImages = images.length;
 
 function showImage(nextIndex) {
@@ -31,10 +32,11 @@ function nextImage() {
 }
 
 showImage(index);
-let intervalId = setInterval(nextImage, 4000);
+nextImage(); // show first transition after initial display
+let intervalId = setInterval(nextImage, interval);
 
 const carousel = document.querySelector(".carousel");
 carousel.addEventListener("mouseenter", () => clearInterval(intervalId));
 carousel.addEventListener("mouseleave", () => {
-  intervalId = setInterval(nextImage, 4000);
+  intervalId = setInterval(nextImage, interval);
 });
