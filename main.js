@@ -24,7 +24,7 @@ fetch('header.html')
 });
 
 function openContactUsForm() {
-  window.location.href = 'contact-us.html';  // Navigate in the same window/tab
+  window.location.href = 'contact-us.html';
 }
 
 fetch('footer.html')
