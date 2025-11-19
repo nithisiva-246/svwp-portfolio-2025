@@ -27,3 +27,9 @@ function openContactUsForm() {
   window.location.href = 'contact-us.html';  // Navigate in the same window/tab
 }
 
+fetch('footer.html')
+  .then(resp => resp.text())
+  .then(html => {
+    document.getElementById('footer').innerHTML = html;
+});
+
