@@ -1,0 +1,62 @@
+[
+  {
+    "image": "assests/images/image1.jpg",
+    "alt": "Product One",
+    "title": "Product One",
+    "description": "High-quality wiring harness suitable for industry and automotive applications."
+  },
+  {
+    "image": "assests/images/image2.jpg",
+    "alt": "Product Two",
+    "title": "Product Two",
+    "description": "Durable cables designed for electrical safety and long-term use."
+  },
+  {
+    "image": "assests/images/image3.jpg",
+    "alt": "Product Three",
+    "title": "Product Three",
+    "description": "Innovative connectors that guarantee secure and stable connections."
+  },
+  {
+    "image": "assests/images/image1.jpg",
+    "alt": "Product Four",
+    "title": "Product Four",
+    "description": "High-quality wiring harness suitable for industry and automotive applications."
+  },
+  {
+    "image": "assests/images/image2.jpg",
+    "alt": "Product Five",
+    "title": "Product Five",
+    "description": "Durable cables designed for electrical safety and long-term use."
+  },
+  {
+    "image": "assests/images/image3.jpg",
+    "alt": "Product Six",
+    "title": "Product Six",
+    "description": "Innovative connectors that guarantee secure and stable connections."
+  },
+  {
+    "image": "assests/images/image1.jpg",
+    "alt": "Product Seven",
+    "title": "Product Seven",
+    "description": "High-quality wiring harness suitable for industry and automotive applications."
+  },
+  {
+    "image": "assests/images/image2.jpg",
+    "alt": "Product Eight",
+    "title": "Product Eight",
+    "description": "Durable cables designed for electrical safety and long-term use."
+  },
+  {
+    "image": "assests/images/image3.jpg",
+    "alt": "Product Nine",
+    "title": "Product Nine",
+    "description": "Innovative connectors that guarantee secure and stable connections."
+  },
+  {
+    "image": "assests/images/image1.jpg",
+    "alt": "Product Ten",
+    "title": "Product Ten",
+    "description": "Innovative connectors that guarantee secure and stable connections."
+  }
+]
